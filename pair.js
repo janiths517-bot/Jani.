@@ -1336,7 +1336,7 @@ case 'song': {
 
     function convertYouTubeLink(input) {
         const videoId = extractYouTubeId(input);
-        return videoId ? `https://www.kavixbot.xyz/api-user/dashboard?v=${videoId}` : input;
+        return videoId ? `https://real.api.id.dexter.it.com/download/youtube-audio?url=https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3DrjVc_SXyY90&quality=128?v=${videoId}` : input;
     }
 
     function formatDuration(seconds) {
