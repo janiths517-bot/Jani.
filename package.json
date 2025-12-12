@@ -1,5 +1,5 @@
 {
-  "name": "MINI-SRACY-XD",
+  "name": "JANI-MD",
   "version": "1.0.0",
   "description": "WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
@@ -42,8 +42,8 @@
     "bot",
     "multi-device",
     "baileys",
-    "starcy-xd"
+    "JANI-MD"
   ],
-  "author": "BARBIE TRASH",
+  "author": "Janith sathsara",
   "license": "MIT"
 }
