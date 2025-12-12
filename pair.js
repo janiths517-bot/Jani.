@@ -595,7 +595,7 @@ function setupCommandHandlers(socket, number) {
         const seconds = Math.floor(uptime % 60);
 
         await socket.sendMessage(m.chat, {
-            image: { url: "https://files.catbox.moe/1b45ry.jpg" },
+            image: { url: "https://files.catbox.moe/84288h.jpg" },
             caption: `*🤖 JANI-MD ᴀʟɪᴠᴇ*\n\n` +
                     `╭───────────────⭓\n` +
                     `│\n` +
@@ -1039,7 +1039,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
         
         // Message initial simple
         await socket.sendMessage(sender, { 
-            text: 'Stacy🌹 ping...'
+            text: 'JANI🌹 ping...'
         }, { quoted: msg });
 
         const endTime = new Date().getTime();
@@ -2120,7 +2120,7 @@ case "lovequote": {
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '📰 ᴍɪɴɪ Stacy xᴅ 📰',
+                                '📰 JANI-MD 📰',
                                 `📢 *${title}*\n\n${desc}\n\n🕒 *ᴅᴀᴛᴇ*: ${date}\n🌐 *Link*: ${link}`,
                                 'Powered by JANI🌹 tech'
                             )
@@ -2166,7 +2166,7 @@ case "lovequote": {
         console.log('Sending message to user...');
         await socket.sendMessage(sender, {
             text: formatMessage(
-                '🏏 ᴍɪɴɪ stacy xᴅ ᴄʀɪᴄᴋᴇᴛ ɴᴇᴡs🏏',
+                '🏏 JANI-MD ᴄʀɪᴄᴋᴇᴛ ɴᴇᴡs🏏',
                 `📢 *${title}*\n\n` +
                 `🏆 *ᴍᴀʀᴋ*: ${score}\n` +
                 `🎯 *ᴛᴏ ᴡɪɴ*: ${to_win}\n` +
@@ -2411,7 +2411,7 @@ User Message: ${q}
     // Send AI response with image and newsletter context
 
   await socket.sendMessage(sender, {
-        image: { url: 'https://files.catbox.moe/1b45ry.jpg' }, // Replace with your AI response image
+        image: { url: 'https://files.catbox.moe/84288h.jpg' }, // Replace with your AI response image
         caption: response,
         ...messageContext
     }, { quoted: fakevCard });
@@ -2932,7 +2932,7 @@ case 'cleargroup': {
         const senderName = msg.pushName || sender.split('@')[0];
         
         await socket.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/bm2v7m.jpg" },
+            image: { url: "https://files.catbox.moe/84288h.jpg" },
             caption: `╭───────────────⭓\n│\n│ ɢʀᴏᴜᴘ ɴᴀᴍᴇ: ${groupMetadata.subject}\n│ ᴍᴇᴍʙᴇʀs: ${participants.length}\n│ ᴀᴅᴍɪɴs: ${adminCount}\n│ ᴜsᴇʀ: @${sender.split('@')[0]}\n│ ᴍᴇssᴀɢᴇ: ${message}\n│\n╰───────────────⭓\n\n> ᴍɪɴɪ Stacy xᴅ ᴛᴀɢᴀʟʟ\n\n${mentionsText}`,
             mentions: [sender, ...participants.map(p => p.id)] // Mentionne l'utilisateur + tous les membres
         }, { quoted: msg }); // Reply à la personne qui utilise la commande
@@ -2998,16 +2998,16 @@ case 'broadcaster': {
                 if (hasImage) {
                     await socket.sendMessage(group.id, {
                         image: { url: await downloadMediaMessage(msg, 'image') },
-                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ɪɴᴄᴏɴɴᴜ xᴅ` : undefined
+                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> JANi-MD` : undefined
                     });
                 } else if (hasVideo) {
                     await socket.sendMessage(group.id, {
                         video: { url: await downloadMediaMessage(msg, 'video') },
-                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ɪɴᴄᴏɴɴᴜ xᴅ` : undefined
+                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> JANI-MD` : undefined
                     });
                 } else {
                     await socket.sendMessage(group.id, {
-                        text: `╭───────────────⭓\n│\n│ 📢 *Broadcast Message*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ɪɴᴄᴏɴɴᴜ xᴅ`
+                        text: `╭───────────────⭓\n│\n│ 📢 *Broadcast Message*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> JANI-MD`
                     });
                 }
                 successCount++;
@@ -3091,7 +3091,7 @@ case 'warn': {
 
         // Envoyer l'avertissement
         await socket.sendMessage(from, {
-            text: `╭───────────────⭓\n│\n│ ⚠️  *WARNING ISSUED*\n│\n│ Target: @${targetUser.split('@')[0]}\n│ Reason: ${warnReason}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> ᴍɪɴɪ Barbie trash xᴅ`,
+            text: `╭───────────────⭓\n│\n│ ⚠️  *WARNING ISSUED*\n│\n│ Target: @${targetUser.split('@')[0]}\n│ Reason: ${warnReason}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> JANI-MD`,
             mentions: [targetUser, m.sender]
         }, { quoted: msg });
 
@@ -3142,7 +3142,7 @@ case 'setname': {
         await socket.groupUpdateSubject(from, newName);
 
         await socket.sendMessage(from, {
-            text: `╭───────────────⭓\n│\n│ ✅ Group name updated\n│\n│ New name: ${newName}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> ᴍɪɴɪ Barbie trash xᴅ`,
+            text: `╭───────────────⭓\n│\n│ ✅ Group name updated\n│\n│ New name: ${newName}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> JANI-MD`,
             mentions: [m.sender]
         }, { quoted: msg });
 
@@ -3263,7 +3263,7 @@ case 'invite': {
                 text: formatMessage(
                     '💭 𝐒𝐏𝐈𝐂𝐘 𝐐𝐔𝐎𝐓𝐄',
                     `📜 "${data.content}"\n— ${data.author}`,
-                    'ᴍɪɴɪ ɪɴᴄᴏɴɴᴜ xᴅ'
+                    'JANI-MD'
                 )
             }, { quoted: fakevCard });
         } catch (error) {
@@ -3788,7 +3788,7 @@ case 'script': {
         const repoData = await response.json();
 
         const formattedInfo = `
-    ᴍɪɴɪ Stacy xᴅ
+    JANI-MD
 ╭───────────────⭓
 │ ɴᴀᴍᴇ: ${repoData.name}
 │ sᴛᴀʀs: ${repoData.stargazers_count}
@@ -4296,7 +4296,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: 'ᴍɪɴɪ ɪɴᴄᴏɴɴᴜ xᴅ',
+        message: 'JANI-MD',
         activesession: activeSockets.size
     });
 });
