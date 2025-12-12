@@ -1648,7 +1648,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
-      const res = await axiosInstance.get(`https://real.api.id.dexter.it.com/download/tiktok-nowm?apikey=${TIKTOK_API_KEY}&url=${encodeURIComponent(tiktokUrl)}`, {
+      const res = await axiosInstance.get(`https://real.api.id.dexter.it.com/download/tiktok?url=https%3A%2F%2Fvt.tiktok.com%2FZSPh5krRc%2F-nowm?apikey=${TIKTOK_API_KEY}&url=${encodeURIComponent(tiktokUrl)}`, {
         signal: controller.signal
       });
       clearTimeout(timeoutId);
