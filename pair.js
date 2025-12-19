@@ -2030,7 +2030,7 @@ case "lovequote": {
                     }
 
                     try {
-                        const res = await axios.get(`https://suhas-bro-api.vercel.app/download/fbdown?url=${encodeURIComponent(fbUrl)}`);
+                        const res = await axios.get(`https://api.srihub.store/download/facebook?apikey=dew_OOnJzBbvdd9vAk9NOOMpRUGpQj8hwbERfugudGbN&url=https%3A%2F%2Fweb.facebook.com%2Fshare%2Fp%2F16UeRFWSUx%2F/fbdown?url=${encodeURIComponent(fbUrl)}`);
                         const result = res.data.result;
 
                         await socket.sendMessage(sender, { react: { text: '⬇', key: msg.key } });
